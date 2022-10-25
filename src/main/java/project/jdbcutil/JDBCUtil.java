@@ -13,7 +13,6 @@ public class JDBCUtil {
             System.out.println("connected");
         } catch (Exception e ) {
             System.out.println(e);
-            System.out.println("cac");
         }
         return connection;
     }
