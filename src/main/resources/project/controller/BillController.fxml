@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="762.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.BillController">
+   <children>
+      <Label layoutX="452.0" layoutY="22.0" prefHeight="49.0" prefWidth="171.0" text="Hóa đơn">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Label>
+      <TableView fx:id="billTable" layoutX="151.0" layoutY="94.0" onMouseClicked="#detail" prefHeight="296.0" prefWidth="773.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="123.0" text="Mã" />
+          <TableColumn fx:id="customerColumn" prefWidth="182.0" text="Tên khách hàng" />
+            <TableColumn fx:id="employeeColumn" prefWidth="161.0" text="Nhân viên" />
+            <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="157.0" text="Ngày" />
+            <TableColumn fx:id="totalPayoutColumn" prefWidth="149.0" text="Tiền thanh toán" />
+        </columns>
+      </TableView>
+      <TableView fx:id="soldProductTable" layoutX="86.0" layoutY="436.0" prefHeight="312.0" prefWidth="904.0">
+        <columns>
+          <TableColumn fx:id="idProductColumn" prefWidth="146.0" text="Mã sản phẩm" />
+          <TableColumn fx:id="nameProductColumn" prefWidth="315.0" text="Tên sản phẩm" />
+            <TableColumn fx:id="priceColumn" prefWidth="237.0" text="Đơn giá" />
+            <TableColumn fx:id="countColumn" prefWidth="88.0" text="Số lượng" />
+            <TableColumn fx:id="moneyColumn" prefWidth="123.0" text="Thành tiền" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

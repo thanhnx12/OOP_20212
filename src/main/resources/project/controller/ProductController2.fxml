@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="517.0" prefWidth="654.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.ProductController2">
+   <children>
+      <GridPane fx:id="productGridPane" alignment="CENTER" hgap="5.0" layoutX="-1.0" layoutY="32.0" prefHeight="214.0" prefWidth="267.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="94.4000244140625" minWidth="10.0" prefWidth="51.60001831054687" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.99995117187504" minWidth="10.0" prefWidth="149.19998168945312" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Mã:" />
+            <Label text="Tên:" GridPane.rowIndex="1" />
+            <Label text="Loại:" GridPane.rowIndex="2" />
+            <Label text="Giá:" GridPane.rowIndex="3" />
+            <Label text="SL:" GridPane.rowIndex="5" />
+            <Label text="Giá mua:" GridPane.rowIndex="4" />
+            <TextField fx:id="idTextField" GridPane.columnIndex="1" />
+            <TextField fx:id="nameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="priceTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="importPriceTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="countTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ComboBox fx:id="categoryComboBox" onAction="#choiceBoxChanged" prefHeight="30.0" prefWidth="192.0" promptText="Chọn" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Trình Trạng:" GridPane.rowIndex="6" />
+            <ComboBox fx:id="statusComboBox" prefHeight="26.0" prefWidth="706.0" promptText="Chọn" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <StackPane layoutX="288.0" layoutY="32.0" prefHeight="182.0" prefWidth="314.0">
+         <children>
+            <GridPane fx:id="filmGridPane" alignment="CENTER" hgap="5.0" prefHeight="182.0" prefWidth="341.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="204.80000000000004" minWidth="10.0" prefWidth="102.39997558593751" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.80003662109377" minWidth="10.0" prefWidth="233.60002441406252" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Thể Loại:" />
+                  <Label text="Đạo diễn:" GridPane.rowIndex="1" />
+                  <Label text="Diễn viên:" GridPane.rowIndex="2" />
+                  <Label text="Thời lượng:" GridPane.rowIndex="3" />
+                  <Label text="Ngôn ngữ thoại:" GridPane.rowIndex="4" />
+                  <Label text="Năm phát hành:" GridPane.rowIndex="5" />
+                  <TextField fx:id="movieGenreTextField" GridPane.columnIndex="1" />
+                  <TextField fx:id="directorTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="mainActorTextField" prefHeight="26.0" prefWidth="212.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="timeFTextField" prefHeight="26.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="languageFTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="premiereTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <GridPane fx:id="musicGridPane" alignment="CENTER" hgap="5.0" prefHeight="182.0" prefWidth="341.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="204.80000000000004" minWidth="10.0" prefWidth="102.39997558593751" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.80003662109377" minWidth="10.0" prefWidth="233.60002441406252" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Thể Loại:" />
+                  <Label text="Nhạc sĩ:" GridPane.rowIndex="2" />
+                  <Label text="Ca sĩ" GridPane.rowIndex="1" />
+                  <Label text="Thời lượng:" GridPane.rowIndex="3" />
+                  <TextField fx:id="musicGenreTextField" GridPane.columnIndex="1" />
+                  <TextField fx:id="singersTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="producerTextField" prefHeight="26.0" prefWidth="212.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="timeMTextField" prefHeight="26.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+            <GridPane fx:id="bookGridPane" alignment="CENTER" hgap="5.0" prefHeight="182.0" prefWidth="341.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="204.80000000000004" minWidth="10.0" prefWidth="102.39997558593751" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.80003662109377" minWidth="10.0" prefWidth="233.60002441406252" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Tác giả:" />
+                  <Label text="Ngôn ngữ:" GridPane.rowIndex="1" />
+                  <Label text="Dịch giả:" GridPane.rowIndex="2" />
+                  <Label text="Số trang:" GridPane.rowIndex="3" />
+                  <TextField fx:id="languageBTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="translatorTextField" prefHeight="26.0" prefWidth="212.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="numberOfPagesTextField" prefHeight="26.0" prefWidth="198.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Nhà xuất bản:" GridPane.rowIndex="4" />
+                  <Label text="Năm xuất bản:" GridPane.rowIndex="5" />
+                  <TextField fx:id="authorTextField" GridPane.columnIndex="1" />
+                  <TextField fx:id="publishingCompanyTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="publishingYearTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+      <Label layoutX="30.0" layoutY="273.0" text="Mô tả:" />
+      <TextArea fx:id="descriptionTextArea" layoutX="47.0" layoutY="309.0" prefHeight="161.0" prefWidth="422.0" />
+      <VBox fx:id="vBox" alignment="CENTER" layoutX="486.0" layoutY="347.0" prefHeight="52.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <StackPane prefHeight="52.0" prefWidth="50.0">
+               <children>
+                  <Button fx:id="fixButton" mnemonicParsing="false" onAction="#fix" prefHeight="26.0" prefWidth="53.0" text="Sửa" />
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#add" prefHeight="26.0" prefWidth="53.0" text="Thêm" />
+               </children>
+            </StackPane>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancel" prefHeight="26.0" prefWidth="56.0" text="Hủy" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

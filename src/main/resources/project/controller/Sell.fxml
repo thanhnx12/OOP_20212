@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="762.0" prefWidth="1049.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.SellController">
+   <children>
+      <Text fx:id="textGioHang" layoutX="200.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giỏ hàng" wrappingWidth="133.33673095703125">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableGiohang" layoutX="19.0" layoutY="100.0" onMouseClicked="#clickAction1" prefHeight="200.0" prefWidth="785.0">
+        <columns>
+          <TableColumn fx:id="tableColumnMaSanPham1" prefWidth="123.20004272460938" text="Mã SP" />
+          <TableColumn fx:id="TableColumnTenSanPham" prefWidth="340.79998779296875" text="Tên SP" />
+            <TableColumn fx:id="TableColumnDonGia" prefWidth="158.4000244140625" text="Đơn Giá" />
+            <TableColumn fx:id="TableColumnSoLuong" prefWidth="160.80001220703127" text="Số lượng" />
+        </columns>
+      </TableView>
+      <Button fx:id="buttonXoaSP" layoutX="19.0" layoutY="306.0" mnemonicParsing="false" onAction="#buttonActionXoaSP" prefHeight="40.0" prefWidth="112.0" text="Xóa SP" />
+      <Button fx:id="buttonXoaTatCA" layoutX="144.0" layoutY="306.0" mnemonicParsing="false" onAction="#buttonActionXoaTatCa" prefHeight="40.0" prefWidth="112.0" text="Xóa tất cả" />
+      <TableView fx:id="tableSanPham" layoutX="28.0" layoutY="449.0" onMouseClicked="#clickAction2" prefHeight="282.0" prefWidth="786.0">
+        <columns>
+          <TableColumn fx:id="tableColumnMaSanPham2" prefWidth="141.59994506835938" text="Mã SP" />
+          <TableColumn fx:id="tableColumnTenSanPham" prefWidth="367.2000274658203" text="Tên SP" />
+            <TableColumn fx:id="tableColumnDonGia" prefWidth="171.199951171875" text="Đơn giá" />
+            <TableColumn fx:id="TableColumnSoLuongTon" prefWidth="103.20001220703125" text="Số lượng tồn" />
+        </columns>
+      </TableView>
+      <TextField fx:id="textFieldTimKiem" layoutX="28.0" layoutY="420.0" onAction="#textFieldActionTimKiemSanPham" prefHeight="26.0" prefWidth="203.0" />
+      <Text fx:id="textTimKiemSanPham" layoutX="28.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tìm kiếm sản phẩm" wrappingWidth="163.73675537109375">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fx:id="textDonHang" layoutX="872.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đơn hàng">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fx:id="textMaHoaDon" layoutX="843.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mã hóa đơn :" />
+      <Text fx:id="textTongTien" layoutX="843.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng tiền : " />
+      <Text fx:id="textGiamGia" layoutX="843.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Giảm giá :" />
+      <Text fx:id="textThanhToan" layoutX="840.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thanh toán :" />
+      <Text fx:id="textvnd1" layoutX="1090.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VNĐ" wrappingWidth="29.6436767578125" />
+      <Text fx:id="textvnd2" layoutX="1090.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\%" wrappingWidth="29.6436767578125" />
+      <Text fx:id="textvn3" layoutX="1090.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VNĐ" wrappingWidth="29.6436767578125" />
+      <Text fx:id="textMaHoaDon1" layoutX="934.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="133.33673095703125" />
+      <Text fx:id="textTongTien1" layoutX="934.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="133.33673095703125" />
+      <Text fx:id="textGiamGia1" layoutX="934.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="133.33673095703125" />
+      <Text fx:id="textThanhToan1" layoutX="934.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="133.33673095703125" />
+      <Button fx:id="buttonTao" layoutX="1056.0" layoutY="130.0" mnemonicParsing="false" onAction="#buttonActionTao" prefHeight="26.0" prefWidth="60.0" text="Tạo" />
+      <Button fx:id="buttonHuyHoaDon" layoutX="860.0" layoutY="488.0" mnemonicParsing="false" onAction="#buttonActionHuyHoaDon" prefHeight="56.0" prefWidth="91.0" text="Hủy hóa đơn" />
+      <Button fx:id="buttonLamMoi" layoutX="986.0" layoutY="488.0" mnemonicParsing="false" onAction="#buttonActionLamMoi" prefHeight="56.0" prefWidth="104.0" text="Làm mới" />
+      <Button fx:id="buttonThanhToan" layoutX="860.0" layoutY="625.0" mnemonicParsing="false" onAction="#buttonActionThanhToan" prefHeight="81.0" prefWidth="223.0" text="Thanh toán">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonTinhTien" layoutX="682.0" layoutY="318.0" mnemonicParsing="false" onAction="#actionTinhTien" prefHeight="56.0" prefWidth="122.0" text="Tính tiền" />
+   </children>
+</AnchorPane>
